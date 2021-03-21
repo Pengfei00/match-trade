@@ -1,0 +1,20 @@
+[package]
+name = "exchange_rs"
+version = "0.1.0"
+authors = ["wnstar <329291362@qq.com>"]
+edition = "2018"
+
+[dependencies]
+chrono = "^0.4"
+actix = "^0.10.0"
+actix-web = "^3"
+actix-web-actors = "^3.0.0"
+rustflake = "^0.1.0"
+match-trade = { path="../../" }
+rust_decimal="^1.10.3"
+serde = { version = "^1.0.124", features = ["derive"] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
